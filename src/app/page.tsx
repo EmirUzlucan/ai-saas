@@ -1,9 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { supabase } from '@/lib/supabaseClient'
+import { Session, User } from '@supabase/supabase-js'
+
 
 export default function Home() {
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
     // Mevcut kullanıcıyı al
